@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><style>
+body { background: #111; color: white; padding: 50px; font-family: sans-serif; }
+.dash {
+  animation: dashArray 2s ease-in-out infinite, dashOffset 2s linear infinite;
+}
+@keyframes dashArray {
+  0% { stroke-dasharray: 0 1 359 0; }
+  50% { stroke-dasharray: 0 359 1 0; }
+  100% { stroke-dasharray: 359 1 0 0; }
+}
+@keyframes dashOffset {
+  0% { stroke-dashoffset: 365; }
+  100% { stroke-dashoffset: 5; }
+}
+</style></head><body>
+<svg viewBox="0 0 220 40" height="40" fill="none" stroke-width="4" stroke="#7C3AED" stroke-linecap="round" stroke-linejoin="round">
+  <path class="dash" pathLength="360" d="M 5,5 h 20 L 5,35 h 20" />
+  <path class="dash" pathLength="360" d="M 40,5 h 15 M 47.5,5 v 30 M 40,35 h 15" />
+  <path class="dash" pathLength="360" d="M 85,5 h -20 v 30 h 20 M 65,20 h 15" />
+  <path class="dash" pathLength="360" d="M 95,35 v -30 l 20,30 v -30" />
+  <path class="dash" pathLength="360" d="M 145,5 h -15 c -5,0 -5,15 0,15 h 10 c 5,0 5,15 0,15 h -15" />
+  <path class="dash" pathLength="360" d="M 155,5 l 10,15 l 10,-15 M 165,20 v 15" />
+  <path class="dash" pathLength="360" d="M 205,5 h -15 c -5,0 -5,15 0,15 h 10 c 5,0 5,15 0,15 h -15" />
+</svg>
+</body></html>
