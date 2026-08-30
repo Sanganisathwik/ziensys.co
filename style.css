@@ -1557,22 +1557,23 @@
         --space-xxl: 80px;
       }
       .container { padding: 0 var(--space-md); }
+      .nav-container { min-height: 54px; }
       .hamburger {
         display: flex;
         position: absolute;
         right: var(--space-md);
         top: 50%;
         transform: translateY(-50%);
-        width: 26px;
-        height: 16px;
-        padding: 10px;
+        width: 18px;
+        height: 12px;
+        padding: 9px;
         box-sizing: content-box;
         background: #0f172a;
-        border-radius: 10px;
+        border-radius: 9px;
       }
       .hamburger span { background-color: #ffffff; height: 2px; border-radius: 2px; }
-      .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .hamburger.active span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+      .hamburger.active span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
       .nav-capsule { background: transparent; border-color: transparent; box-shadow: none; }
       .nav-menu { display: none; }
       .nav-contact-link { display: none !important; }
@@ -2983,7 +2984,7 @@
 
     @media (max-width: 768px) {
       .hero {
-        padding: 96px 0 40px 0;
+        padding: 132px 0 40px 0;
       }
       .hero-glass-dashboard {
         padding: 30px 22px;
