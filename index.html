@@ -811,15 +811,11 @@
 
           <!-- Right Column: Glassmorphic Dark Form Console -->
           <div class="contact-premium-right">
-            <form class="contact-glass-form" id="ziensys-contact-form" action="https://formsubmit.co/info@ziensys.com" method="POST">
+            <form class="contact-glass-form" id="ziensys-contact-form"
+                  action="https://script.google.com/macros/s/AKfycbx2YrbNBusUkc8rtpz-xJtq7Foch0F5OcaGkGlfclXpMvLoPFSzIwDHSZb8Cbbb_j5Upw/exec"
+                  method="POST">
               <!-- Honeypot field to prevent spam -->
-              <input type="text" name="_honey" style="display:none">
-              <!-- Disable FormSubmit captcha for a seamless experience -->
-              <input type="hidden" name="_captcha" value="false">
-              <!-- Set email subject -->
-              <input type="hidden" name="_subject" value="New Website Contact Form Submission!">
-              <!-- Auto-response to the sender -->
-              <input type="hidden" name="_autoresponse" value="Thank you for contacting ZIENSYS. We have received your transmission and our engineering corps will be in touch shortly.">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
               <div class="form-input-group">
                 <input type="text" name="name" id="contact-name" class="contact-glass-control" placeholder="Name" required>
@@ -828,9 +824,13 @@
                 <input type="email" name="email" id="contact-email" class="contact-glass-control" placeholder="Email" required>
               </div>
               <div class="form-input-group">
+                <input type="tel" name="phone" id="contact-phone" class="contact-glass-control" placeholder="Phone (optional)">
+              </div>
+              <div class="form-input-group">
                 <textarea name="message" id="contact-message" class="contact-glass-control" placeholder="Message" required></textarea>
               </div>
               <button type="submit" class="contact-glass-submit">Submit</button>
+              <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite" hidden></p>
             </form>
           </div>
         </div>
@@ -1078,6 +1078,45 @@
           card.classList.add('active-card');
         });
       });
+
+      // 8. Contact form -> Google Apps Script (saves to Sheet + emails Info@ziensys.com)
+      const contactForm = document.getElementById("ziensys-contact-form");
+      if (contactForm) {
+        const submitBtn = contactForm.querySelector(".contact-glass-submit");
+        const statusEl = document.getElementById("contact-form-status");
+        const defaultLabel = submitBtn ? submitBtn.textContent : "Submit";
+
+        const setStatus = (msg, ok) => {
+          if (!statusEl) return;
+          statusEl.textContent = msg;
+          statusEl.hidden = false;
+          statusEl.classList.toggle("is-error", ok === false);
+          statusEl.classList.toggle("is-ok", ok === true);
+        };
+
+        contactForm.addEventListener("submit", async (ev) => {
+          ev.preventDefault();
+          if (contactForm._honey && contactForm._honey.value) return; // bot
+          if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
+
+          try {
+            await fetch(contactForm.action, {
+              method: "POST",
+              body: new FormData(contactForm)
+            });
+            contactForm.reset();
+            setStatus("Thanks — your message has been sent. Our team will be in touch shortly.", true);
+            if (submitBtn) submitBtn.textContent = "Message sent ✓";
+          } catch (err) {
+            setStatus("Something went wrong sending your message. Please email info@ziensys.com directly.", false);
+            if (submitBtn) submitBtn.textContent = "Try again";
+          } finally {
+            setTimeout(() => {
+              if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = defaultLabel; }
+            }, 5000);
+          }
+        });
+      }
     });
   </script>
 </body>

@@ -188,7 +188,7 @@ function json_(obj) {
    FormSubmit action on #ziensys-contact-form)
 
    <script>
-     const CONTACT_ENDPOINT = 'https://script.google.com/macros/s/XXXXXXXX/exec';
+     const CONTACT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx2YrbNBusUkc8rtpz-xJtq7Foch0F5OcaGkGlfclXpMvLoPFSzIwDHSZb8Cbbb_j5Upw/exec';
      const form = document.getElementById('ziensys-contact-form');
      form.addEventListener('submit', async (ev) => {
        ev.preventDefault();

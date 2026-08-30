@@ -3601,6 +3601,15 @@
 
     /* ================= Website revision components ================= */
 
+    /* Contact form status message */
+    .contact-form-status {
+      margin: 14px 0 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .contact-form-status.is-ok { color: #16a34a; }
+    .contact-form-status.is-error { color: #dc2626; }
+
     /* Service card Solutions / Assessments sub-block */
     .service-sub-block {
       margin-top: 18px;
