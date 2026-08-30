@@ -198,7 +198,8 @@ function json_(obj) {
        try {
          await fetch(CONTACT_ENDPOINT, {
            method: 'POST',
-           body: new FormData(form)          // name / email / message fields
+           mode: 'no-cors',                  // /exec sends no CORS headers
+           body: new FormData(form)          // name / email / phone / message
          });
          btn.textContent = 'Message sent ✓';
          form.reset();

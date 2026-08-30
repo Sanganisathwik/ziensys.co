@@ -1100,8 +1100,12 @@
           if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
 
           try {
+            // Apps Script /exec does not return CORS headers, so use no-cors:
+            // the request still reaches the script (saves + emails); the
+            // response is opaque, which is fine for a fire-and-forget submit.
             await fetch(contactForm.action, {
               method: "POST",
+              mode: "no-cors",
               body: new FormData(contactForm)
             });
             contactForm.reset();
