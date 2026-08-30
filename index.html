@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=solutions-menu-2">
 </head>
 <body>
   <!-- Luxury Cursor System -->
@@ -30,12 +30,10 @@
   <!-- Top Absolute Header for Logo and Contact button (Scrolls away) -->
   <div class="top-brand-bar">
     <div class="container top-brand-container">
-      <div class="brand-lockup">
-        <a href="#hero" class="brand-logo" aria-label="Ziensys Home">
-          <img src="ziensys-logo.png" alt="ZIENSYS" class="brand-logo-img">
-        </a>
+      <a href="#hero" class="brand-lockup" aria-label="Ziensys Home">
+        <img src="ziensys-logo.png" alt="" class="brand-logo-img">
         <span class="brand-tagline">Design &bull; Secure &bull; Automate &bull; Operate</span>
-      </div>
+      </a>
       <a href="#contact" class="nav-contact-link">Get in touch</a>
     </div>
   </div>
@@ -125,8 +123,43 @@
               </div>
             </div>
           </li>
-          <li class="nav-item"><a href="#solutions" class="nav-link">Solutions</a></li>
-          <li class="nav-item"><a href="#assessments" class="nav-link">Assessments</a></li>
+          <li class="nav-item nav-item-dropdown" id="nav-solutions">
+            <a href="#solutions" class="nav-link" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Solutions</a>
+            <div class="megamenu-dropdown megamenu-dropdown-pair" role="menu" aria-label="Solutions and Assessments">
+              <div class="megamenu-grid megamenu-grid-pair">
+                <section class="megamenu-list-panel" aria-labelledby="solutions-menu-title">
+                  <div class="megamenu-list-heading">
+                    <span id="solutions-menu-title">Solutions</span>
+                    <span>01</span>
+                  </div>
+                  <p class="megamenu-list-intro">Delivery-ready engagements across six capabilities.</p>
+                  <div class="megamenu-list" role="group" aria-label="Solutions">
+                    <a href="#service-ai" role="menuitem">AI / ML &amp; Intelligence <span>→</span></a>
+                    <a href="#service-software" role="menuitem">Web Dev &amp; Software <span>→</span></a>
+                    <a href="#service-network" role="menuitem">Network &amp; Security <span>→</span></a>
+                    <a href="#service-cloud" role="menuitem">Cloud &amp; IT <span>→</span></a>
+                    <a href="#service-automation" role="menuitem">Automation <span>→</span></a>
+                    <a href="#service-cybersecurity" role="menuitem">Cybersecurity <span>→</span></a>
+                  </div>
+                </section>
+                <section class="megamenu-list-panel" aria-labelledby="assessments-menu-title">
+                  <div class="megamenu-list-heading">
+                    <span id="assessments-menu-title">Assessments</span>
+                    <span>02</span>
+                  </div>
+                  <p class="megamenu-list-intro">Fixed-scope reviews and advisory roadmaps.</p>
+                  <div class="megamenu-list" role="group" aria-label="Assessments">
+                    <a href="#assessments" role="menuitem">AI Readiness Review <span>→</span></a>
+                    <a href="#assessments" role="menuitem">Architecture &amp; Code Review <span>→</span></a>
+                    <a href="#assessments" role="menuitem">Network Assessment <span>→</span></a>
+                    <a href="#assessments" role="menuitem">Cloud &amp; Cost Review <span>→</span></a>
+                    <a href="#assessments" role="menuitem">Automation &amp; DevOps Audit <span>→</span></a>
+                    <a href="#assessments" role="menuitem">Security Posture Assessment <span>→</span></a>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </li>
           <li class="nav-item"><a href="#cases" class="nav-link">Portfolio</a></li>
           <li class="nav-item"><a href="#vision" class="nav-link">About</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
@@ -144,8 +177,13 @@
   <div class="mobile-menu-overlay" id="mobile-menu">
     <a href="#hero" class="nav-link mobile-link">Home</a>
     <a href="#services" class="nav-link mobile-link">Services</a>
-    <a href="#solutions" class="nav-link mobile-link">Solutions</a>
-    <a href="#assessments" class="nav-link mobile-link">Assessments</a>
+    <div class="mobile-link-group">
+      <button type="button" class="nav-link mobile-submenu-toggle" aria-expanded="false">Solutions</button>
+      <div class="mobile-submenu">
+        <a href="#solutions" class="nav-link mobile-link">Solutions</a>
+        <a href="#assessments" class="nav-link mobile-link">Assessments</a>
+      </div>
+    </div>
     <a href="#cases" class="nav-link mobile-link">Portfolio</a>
     <a href="#vision" class="nav-link mobile-link">About</a>
     <a href="#contact" class="nav-link mobile-link">Contact</a>
@@ -167,15 +205,14 @@
           <div class="hero-dash-left">
             <span class="hero-dash-tag">// Intelligence-Led Engineering</span>
             <h1 class="hero-dash-title">
-              Powered by <span class="highlight-blue">AI &amp; Machine Intelligence</span><br>engineered for the enterprise.
+              We don't just consume technology <span class="highlight-blue">we architect it.</span>
             </h1>
             <p class="hero-dash-sub">
-              Ziensys designs intelligent, secure, and automated systems &mdash; from applied AI/ML models to
-              software, network security, cloud, and automation &mdash; built for stability, scale, and
-              mathematical predictability.
+              We architect and build complex technology systems around your business not around off-the-shelf limitations. From AI and software to cloud, infrastructure, automation, and security, ZienSys brings deep engineering capability under one roof.
             </p>
+            <p class="hero-dash-note">Architect with purpose. Engineer with precision. Deliver with confidence.</p>
             <div class="hero-pill-btn-group">
-              <a href="#services" class="hero-pill-btn hero-pill-primary">Explore Core Solutions</a>
+              <a href="#solutions" class="hero-pill-btn hero-pill-primary">Explore Solutions</a>
               <a href="#contact" class="hero-pill-btn hero-pill-secondary">Discuss Architecture</a>
             </div>
           </div>
@@ -185,42 +222,36 @@
             <div class="hero-accordion-container">
               <div class="hero-accordion-plate plate-1-bg plate-expanded">
                 <div class="plate-content">
-                  <span class="plate-tag">01 &mdash; INTELLIGENCE</span>
-                  <div class="plate-label-bottom">AI / ML &amp;<br>Intelligence</div>
+                  <span class="plate-service-label" style="font-family: 'Courier New', monospace !important; font-size: 0.82rem !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; writing-mode: vertical-rl !important; white-space: nowrap !important;">01 &mdash; AI/ML</span>
                 </div>
               </div>
               <div class="hero-accordion-plate plate-2-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">02 &mdash; BUILD</span>
-                  <div class="plate-label-bottom">Web Dev &amp;<br>Software Services</div>
+                  <span class="plate-service-label" style="font-family: 'Courier New', monospace !important; font-size: 0.82rem !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; writing-mode: vertical-rl !important; white-space: nowrap !important;">02 &mdash; Software Services</span>
                 </div>
               </div>
               <div class="hero-accordion-plate plate-3-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">03 &mdash; CONNECT</span>
-                  <div class="plate-label-bottom">Network &amp;<br>Security</div>
+                  <span class="plate-service-label" style="font-family: 'Courier New', monospace !important; font-size: 0.82rem !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; writing-mode: vertical-rl !important; white-space: nowrap !important;">03 &mdash; Network &amp; Security</span>
                 </div>
               </div>
               <div class="hero-accordion-plate plate-4-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">04 &mdash; SCALE</span>
-                  <div class="plate-label-bottom">Cloud &amp; IT</div>
+                  <span class="plate-service-label" style="font-family: 'Courier New', monospace !important; font-size: 0.82rem !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; writing-mode: vertical-rl !important; white-space: nowrap !important;">04 &mdash; Cloud &amp; IT</span>
                 </div>
               </div>
               <div class="hero-accordion-plate plate-5-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">05 &mdash; AUTOMATE</span>
-                  <div class="plate-label-bottom">Automation</div>
+                  <span class="plate-service-label" style="font-family: 'Courier New', monospace !important; font-size: 0.82rem !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; writing-mode: vertical-rl !important; white-space: nowrap !important;">05 &mdash; Automation</span>
                 </div>
               </div>
               <div class="hero-accordion-plate plate-6-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">06 &mdash; DEFEND</span>
-                  <div class="plate-label-bottom">Cybersecurity</div>
+                  <span class="plate-service-label" style="font-family: 'Courier New', monospace !important; font-size: 0.82rem !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; writing-mode: vertical-rl !important; white-space: nowrap !important;">06 &mdash; Cyber Security</span>
                 </div>
               </div>
             </div>
-            <div class="hero-accordion-overlay-text">ZIENSYS</div>
+            <div class="hero-accordion-overlay-text" aria-hidden="true">ZIENSYS</div>
           </div>
         </div>
       </div>
@@ -294,23 +325,8 @@
             </span>
             <h2 class="about-title">Transforming <span class="highlight-blue">Ideas into Digital Reality</span></h2>
             <p class="vision-body" style="border: none; padding: 0; margin-top: 10px;">
-              At <span class="highlight-ziensys">Ziensys</span>, we reject off-the-shelf mediocrity; true scale is engineered, not merely assembled. We architect bespoke systems governed by mathematical certainty, empowering your enterprise to dominate its sector. Our focus is absolute: optimizing mission-critical digital assets by eliminating protocol overhead, guaranteeing deterministic sub-millisecond latency, and embedding zero-trust security at the deepest architectural layers.
+              At <span class="highlight-ziensys">Ziensys</span>, we reject off the shelf mediocrity. True scale is engineered, not merely assembled. We architect bespoke systems governed by mathematical certainty, empowering your enterprise to dominate its sector. Our focus is absolute: optimizing mission critical digital assets by eliminating protocol overhead, guaranteeing deterministic sub millisecond latency, and embedding zero trust security at the deepest architectural layers.
             </p>
-            
-            <div class="about-stats-row">
-              <div class="about-stat-item">
-                <span class="about-stat-num">150+</span>
-                <span class="about-stat-label">Team Members</span>
-              </div>
-              <div class="about-stat-item">
-                <span class="about-stat-num">2000+</span>
-                <span class="about-stat-label">Happy Clients</span>
-              </div>
-              <div class="about-stat-item">
-                <span class="about-stat-num">99%</span>
-                <span class="about-stat-label">Client Satisfaction</span>
-              </div>
-            </div>
 
             <div class="about-signature-area">
               <span class="about-signature-text">Sunil</span>
@@ -350,12 +366,8 @@
                 <h3 class="service-inspiration-title">AI / ML &amp; Intelligence</h3>
                 <p class="service-inspiration-desc">
                   Applied machine learning, predictive models, LLM and agentic workflows, computer vision, and
-                  decision-intelligence pipelines &mdash; engineered and operationalised by <span class="highlight-ziensys">Ziensys</span>.
+                  decision intelligence pipelines engineered and operationalised by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
-                <div class="service-sub-block">
-                  <p><span class="service-sub-label">Solutions:</span> Model development &amp; MLOps, LLM/RAG assistants, forecasting &amp; anomaly detection, intelligent document processing.</p>
-                  <p><span class="service-sub-label">Assessments:</span> AI readiness &amp; data-maturity review, model risk &amp; bias audit, use-case feasibility scoring.</p>
-                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -387,13 +399,9 @@
               <div style="margin-top: 24px; margin-bottom: 24px;">
                 <h3 class="service-inspiration-title">Web Dev &amp; Software Services</h3>
                 <p class="service-inspiration-desc">
-                  Custom web and product engineering &mdash; front-end, APIs, high-performance backends, and
-                  system integration &mdash; delivered to a consistent architectural standard by <span class="highlight-ziensys">Ziensys</span>.
+                  Custom web and product engineering, front end design, APIs, high performance backends, and
+                  system integration delivered to a consistent architectural standard by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
-                <div class="service-sub-block">
-                  <p><span class="service-sub-label">Solutions:</span> Web &amp; mobile apps, SaaS platforms, API &amp; microservices, legacy modernisation, e-commerce.</p>
-                  <p><span class="service-sub-label">Assessments:</span> Code &amp; architecture review, performance audit, technical due diligence, UX/accessibility check.</p>
-                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -425,13 +433,9 @@
               <div style="margin-top: 24px; margin-bottom: 24px;">
                 <h3 class="service-inspiration-title">Network &amp; Security</h3>
                 <p class="service-inspiration-desc">
-                  Secure network design, segmentation, firewalls, VPN and zero-trust access, plus continuous
-                  monitoring &mdash; architected for resilience by <span class="highlight-ziensys">Ziensys</span>.
+                  Secure network design, segmentation, firewalls, VPN and zero trust access, plus continuous
+                  monitoring architected for resilience by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
-                <div class="service-sub-block">
-                  <p><span class="service-sub-label">Solutions:</span> LAN/WAN &amp; SD-WAN design, zero-trust network access, firewall &amp; NAC, secure remote access.</p>
-                  <p><span class="service-sub-label">Assessments:</span> Network architecture review, vulnerability scan, segmentation &amp; firewall rule audit.</p>
-                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -464,13 +468,9 @@
               <div style="margin-top: 24px; margin-bottom: 24px;">
                 <h3 class="service-inspiration-title">Cloud &amp; IT</h3>
                 <p class="service-inspiration-desc">
-                  Cloud architecture, migration, and hybrid infrastructure alongside day-to-day IT operations
-                  and managed support &mdash; run to strict SLAs by <span class="highlight-ziensys">Ziensys</span>.
+                  Cloud architecture, migration, and hybrid infrastructure alongside day to day IT operations
+                  and managed support run to strict SLAs by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
-                <div class="service-sub-block">
-                  <p><span class="service-sub-label">Solutions:</span> Cloud migration &amp; landing zones, hybrid/multi-cloud, IaC, backup &amp; DR, managed IT &amp; helpdesk.</p>
-                  <p><span class="service-sub-label">Assessments:</span> Cloud cost &amp; well-architected review, migration readiness, IT operations maturity assessment.</p>
-                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -503,13 +503,9 @@
               <div style="margin-top: 24px; margin-bottom: 24px;">
                 <h3 class="service-inspiration-title">Automation</h3>
                 <p class="service-inspiration-desc">
-                  Workflow, infrastructure, and business-process automation &mdash; CI/CD, RPA, orchestration,
-                  and self-healing operations &mdash; engineered for reliability by <span class="highlight-ziensys">Ziensys</span>.
+                  Workflow, infrastructure, and business process automation, CI/CD, RPA, orchestration,
+                  and self healing operations engineered for reliability by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
-                <div class="service-sub-block">
-                  <p><span class="service-sub-label">Solutions:</span> CI/CD pipelines, infrastructure automation, RPA bots, workflow orchestration, monitoring &amp; auto-remediation.</p>
-                  <p><span class="service-sub-label">Assessments:</span> Automation opportunity mapping, DevOps maturity review, process-bottleneck analysis.</p>
-                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -541,13 +537,9 @@
               <div style="margin-top: 24px; margin-bottom: 24px;">
                 <h3 class="service-inspiration-title">Cybersecurity</h3>
                 <p class="service-inspiration-desc">
-                  Zero-trust security architecture, threat detection and response, identity and data protection,
-                  and compliance &mdash; built into every layer by <span class="highlight-ziensys">Ziensys</span>.
+                  Zero trust security architecture, threat detection and response, identity and data protection,
+                  and compliance built into every layer by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
-                <div class="service-sub-block">
-                  <p><span class="service-sub-label">Solutions:</span> Zero-trust &amp; IAM, SIEM/SOC &amp; incident response, endpoint &amp; data protection, application security.</p>
-                  <p><span class="service-sub-label">Assessments:</span> Penetration testing, security posture &amp; gap assessment, compliance readiness (ISO 27001, SOC 2, GDPR).</p>
-                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -563,72 +555,37 @@
       </div>
     </section>
 
-    <!-- Solutions Overview -->
-    <section class="section-spacing solutions-section" id="solutions">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">// Solutions</span>
-          <h2 class="section-title">Outcome-Focused Solutions</h2>
-          <p class="section-desc">Packaged, delivery-ready engagements built on our six core capabilities &mdash; each with a consistent scope, architecture standard, and hand-off.</p>
-        </div>
-        <div class="solutions-grid reveal">
-          <div class="solutions-item"><span class="solutions-num">01</span><h3>AI / ML &amp; Intelligence</h3><p>Model development &amp; MLOps, LLM/RAG assistants, forecasting, intelligent document processing.</p><a href="#service-ai">Explore →</a></div>
-          <div class="solutions-item"><span class="solutions-num">02</span><h3>Web Dev &amp; Software</h3><p>Web &amp; mobile apps, SaaS platforms, APIs &amp; microservices, legacy modernisation.</p><a href="#service-software">Explore →</a></div>
-          <div class="solutions-item"><span class="solutions-num">03</span><h3>Network &amp; Security</h3><p>SD-WAN design, zero-trust network access, firewall &amp; NAC, secure remote access.</p><a href="#service-network">Explore →</a></div>
-          <div class="solutions-item"><span class="solutions-num">04</span><h3>Cloud &amp; IT</h3><p>Cloud migration &amp; landing zones, hybrid/multi-cloud, IaC, managed IT &amp; helpdesk.</p><a href="#service-cloud">Explore →</a></div>
-          <div class="solutions-item"><span class="solutions-num">05</span><h3>Automation</h3><p>CI/CD pipelines, infrastructure automation, RPA, orchestration, auto-remediation.</p><a href="#service-automation">Explore →</a></div>
-          <div class="solutions-item"><span class="solutions-num">06</span><h3>Cybersecurity</h3><p>Zero-trust &amp; IAM, SIEM/SOC &amp; incident response, endpoint &amp; data protection, AppSec.</p><a href="#service-cybersecurity">Explore →</a></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Assessments Overview -->
-    <section class="section-spacing assessments-section" id="assessments">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">// Assessments</span>
-          <h2 class="section-title">Assessments &amp; Advisory</h2>
-          <p class="section-desc">Short, fixed-scope reviews that benchmark your current state, quantify risk, and produce a prioritised roadmap before any build begins.</p>
-        </div>
-        <div class="assessments-grid reveal">
-          <div class="assessments-item"><h3>AI Readiness Review</h3><p>Data maturity, use-case feasibility, model risk &amp; bias audit.</p></div>
-          <div class="assessments-item"><h3>Architecture &amp; Code Review</h3><p>Design, performance, and technical due-diligence assessment.</p></div>
-          <div class="assessments-item"><h3>Network Assessment</h3><p>Architecture review, vulnerability scan, segmentation &amp; firewall audit.</p></div>
-          <div class="assessments-item"><h3>Cloud &amp; Cost Review</h3><p>Well-architected review, migration readiness, cost optimisation.</p></div>
-          <div class="assessments-item"><h3>Automation &amp; DevOps Audit</h3><p>Opportunity mapping, DevOps maturity, process-bottleneck analysis.</p></div>
-          <div class="assessments-item"><h3>Security Posture Assessment</h3><p>Penetration testing, gap analysis, compliance readiness (ISO 27001, SOC 2).</p></div>
-        </div>
-      </div>
-    </section>
-
     <section class="section-spacing cases-section" id="cases">
       <div class="container">
         <div class="cases-header-grid reveal">
           <div>
-            <span class="cases-capsule-tag">Case Studies</span>
-            <h2 class="cases-title">Engineered Architectures</h2>
+            <span class="cases-capsule-tag">How we think → What we build → How we deliver</span>
+            <h2 class="cases-title">Why Choose ZIENSYS</h2>
           </div>
           <div>
-            <p class="cases-desc">Examine real-world blueprints of highly scalable, resilient, and enterprise-hardened technological integrations developed by our elite engineering corps.</p>
+            <p class="cases-desc">One engineering partner across intelligence, software, network, cloud, automation, and security delivering measurable value with consistent standards.</p>
           </div>
         </div>
 
         <div class="cases-grid perspective-context">
-          <!-- Card 1: Logistics & Infrastructure (Lilac Theme) -->
+          <!-- Card 1: 01 — ENGINEERED AROUND YOUR BUSINESS (Lilac Theme) -->
           <div class="cases-premium-card case-card card-theme-lilac reveal">
             <div class="cases-card-header">
               <div class="cases-card-title-group">
-                <div class="cases-card-meta">Logistics & Infrastructure</div>
-                <h3 class="cases-card-title">Global Flow-Control Network <span class="cases-card-arrow">↗</span></h3>
+                <div class="cases-card-meta">01 — ENGINEERED AROUND YOUR BUSINESS</div>
+                <h3 class="cases-card-title">Architecture Before Implementation</h3>
               </div>
+              <span class="cases-card-arrow-wrap"><span class="cases-card-arrow">↗</span></span>
             </div>
             <div class="cases-card-body">
               <p class="cases-card-desc">
-                We designed a sub-second parallel path recalculation system mapping 18,000 live distribution points to bypass massive graph engine bottlenecks.
+                We do not believe in forcing businesses into pre built technology stacks. Every system starts with understanding your domain, operational realities, growth objectives, and constraints.
+
+We design bespoke, architecture first solutions built to fit your business, not the other way around.
               </p>
               <div class="cases-card-metric-badge">
                 <span class="cases-metric-dot"></span>
-                <span class="cases-metric-text">+42% Routing Speed</span>
+                <span class="cases-metric-text"></span>
               </div>
             </div>
             <div class="cases-card-image-wrap">
@@ -636,21 +593,23 @@
             </div>
           </div>
 
-          <!-- Card 2: Financial Systems (Solid Black Theme) -->
+          <!-- Card 2: 02 — BUILT FOR RELIABILITY & TRUST (Solid Black Theme) -->
           <div class="cases-premium-card case-card card-theme-dark reveal reveal-delay-1">
             <div class="cases-card-header">
               <div class="cases-card-title-group">
-                <div class="cases-card-meta">Financial Technology</div>
-                <h3 class="cases-card-title">High-Frequency Exchange Core <span class="cases-card-arrow">↗</span></h3>
+                <div class="cases-card-meta">02 — BUILT FOR RELIABILITY & TRUST</div>
+                <h3 class="cases-card-title">Predictable by Design</h3>
               </div>
+              <span class="cases-card-arrow-wrap"><span class="cases-card-arrow">↗</span></span>
             </div>
             <div class="cases-card-body">
               <p class="cases-card-desc">
-                We engineered lock-free circular memory ring buffers and strict CPU isolation models to completely neutralize high-frequency transaction tail-latency spikes.
+            
+From AI and software to cloud, networks, automation, and cybersecurity, our engineering approach keeps security and reliability embedded at every layer.
               </p>
               <div class="cases-card-metric-badge">
                 <span class="cases-metric-dot"></span>
-                <span class="cases-metric-text">99.999% Determinism</span>
+                <span class="cases-metric-text"></span>
               </div>
             </div>
             <div class="cases-card-image-wrap">
@@ -662,70 +621,23 @@
           <div class="cases-premium-card case-card card-theme-lilac reveal reveal-delay-2">
             <div class="cases-card-header">
               <div class="cases-card-title-group">
-                <div class="cases-card-meta">Industrial IoT & Edge</div>
-                <h3 class="cases-card-title">Processing Plant Telemetry <span class="cases-card-arrow">↗</span></h3>
+                <div class="cases-card-meta">03 — FROM CLARITY TO DELIVERY</div>
+                <h3 class="cases-card-title">The-Risk Before You Build</h3>
               </div>
+              <span class="cases-card-arrow-wrap"><span class="cases-card-arrow">↗</span></span>
             </div>
             <div class="cases-card-body">
               <p class="cases-card-desc">
-                We deployed edge microprocessing units running localized RTOS kernels, isolating transmission buffering from heavy electromagnetic noise.
+               We help organizations move from uncertainty to an actionable engineering roadmap through focused assessments, architecture reviews, technical strategy, and clearly defined implementation plans.
               </p>
               <div class="cases-card-metric-badge">
                 <span class="cases-metric-dot"></span>
-                <span class="cases-metric-text">0% Telemetry Loss</span>
               </div>
             </div>
             <div class="cases-card-image-wrap">
               <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Processing Plant Edge Telemetry System">
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-spacing why-choose-section" id="why-choose">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">// Why Ziensys</span>
-          <h2 class="section-title">Why Choose ZIENSYS</h2>
-          <p class="section-desc">One engineering partner across intelligence, software, network, cloud, automation, and security &mdash; delivering measurable value with consistent standards.</p>
-        </div>
-
-        <div class="why-grid reveal">
-          <div class="why-item">
-            <h3 class="why-item-title">Differentiated Engineering</h3>
-            <p class="why-item-desc">Bespoke, architecture-first systems &mdash; not off-the-shelf assembly &mdash; designed around your domain and scale.</p>
-          </div>
-          <div class="why-item">
-            <h3 class="why-item-title">Reliability by Design</h3>
-            <p class="why-item-desc">Deterministic behaviour, tested failure modes, and strict SLAs so production stays predictable.</p>
-          </div>
-          <div class="why-item">
-            <h3 class="why-item-title">Deep Technical Capability</h3>
-            <p class="why-item-desc">Specialists spanning AI/ML, software, networks, cloud, automation, and security under one roof.</p>
-          </div>
-          <div class="why-item">
-            <h3 class="why-item-title">Security at Every Layer</h3>
-            <p class="why-item-desc">Zero-trust principles, hardened defaults, and continuous monitoring built in from day one.</p>
-          </div>
-          <div class="why-item">
-            <h3 class="why-item-title">Delivery Value</h3>
-            <p class="why-item-desc">Fixed-scope assessments and transparent roadmaps that de-risk investment before the build.</p>
-          </div>
-          <div class="why-item">
-            <h3 class="why-item-title">Consistent Standards</h3>
-            <p class="why-item-desc">Shared layout, terminology, and quality bar across every service and engagement.</p>
-          </div>
-        </div>
-
-        <div class="eng-corps-block reveal">
-          <h3 class="eng-corps-title">Engineering Corps</h3>
-          <p class="eng-corps-desc">
-            Our Engineering Corps is a cross-disciplinary group of systems engineers, architects, and
-            developers who own delivery end to end &mdash; from assessment and architecture through build,
-            automation, and ongoing operations. Teams are formed around each engagement so the right
-            specialists in AI/ML, software, network, cloud, and security work directly on your systems.
-          </p>
         </div>
       </div>
     </section>
@@ -746,7 +658,7 @@
             </div>
             <h2 class="contact-premium-title">Get in touch</h2>
             <p class="contact-premium-desc">
-              Have a specific systems architecture inquiry or ready to engineer a mathematically sound enterprise network? Reach out to our engineering corps.
+              Have a specific systems architecture inquiry or ready to engineer a mathematically sound enterprise network? Reach out to our engineering team.
             </p>
 
             <!-- Stacked Glass Contact Cards -->
@@ -769,15 +681,15 @@
               </a>
 
               <!-- Call Card -->
-              <a href="tel:+31633223649" class="contact-info-card">
+              <a href="tel:+919980679449" class="contact-info-card">
                 <div class="contact-info-icon-wrap">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                   </svg>
                 </div>
                 <div class="contact-info-details">
-                  <span class="contact-info-title">Call us</span>
-                  <span class="contact-info-val">+31 6 33223649</span>
+                  <span class="contact-info-title">Mobile number</span>
+                  <span class="contact-info-val">9980679449</span>
                 </div>
                 <div class="contact-info-arrow">
                   <span>↗</span>
@@ -793,13 +705,10 @@
                   </svg>
                 </div>
                 <div class="contact-info-details">
-                  <span class="contact-info-title">Our location</span>
+                  <span class="contact-info-title">Location</span>
                   <span class="contact-info-val" style="line-height: 1.2;">
-                    ZIENSYS
-                    <span style="display: block; font-size: 0.8rem; color: #86868b; font-weight: 400; line-height: 1.5; margin-top: 4px;">
-                      WeWork, Financial District, Nanakramguda<br>
-                      Hyderabad, Telangana 500032, India
-                    </span>
+                    WeWork, Financial District, Nanakramguda<br>
+                    Hyderabad, Telangana 500032, India
                   </span>
                 </div>
                 <div class="contact-info-arrow">
@@ -963,7 +872,7 @@
         navLinks.forEach(link => {
           link.classList.remove("active-link");
           const href = link.getAttribute("href");
-          if (href === `#${currentSectionId}`) {
+          if (href === `#${currentSectionId}` || (currentSectionId === "solutions" && href === "#solutions")) {
             link.classList.add("active-link");
           }
         });
@@ -991,6 +900,44 @@
         if (mobileMenu.classList.contains("open")) toggleMenu();
       }));
 
+      const solutionsToggle = document.querySelector(".mobile-submenu-toggle");
+      if (solutionsToggle) {
+        solutionsToggle.addEventListener("click", () => {
+          const group = solutionsToggle.closest(".mobile-link-group");
+          const open = group.classList.toggle("is-open");
+          solutionsToggle.setAttribute("aria-expanded", open);
+        });
+      }
+
+      const solutionsNav = document.getElementById("nav-solutions");
+      const solutionsTrigger = solutionsNav && solutionsNav.querySelector("[data-dropdown-trigger]");
+      if (solutionsTrigger && solutionsNav) {
+        solutionsTrigger.addEventListener("click", (event) => {
+          event.preventDefault();
+          const open = !solutionsNav.classList.contains("is-open");
+          solutionsNav.classList.toggle("is-open", open);
+          solutionsTrigger.setAttribute("aria-expanded", open);
+        });
+        solutionsNav.querySelectorAll('[role="menuitem"]').forEach((menuItem) => {
+          menuItem.addEventListener("click", () => {
+            solutionsNav.classList.remove("is-open");
+            solutionsTrigger.setAttribute("aria-expanded", "false");
+          });
+        });
+        document.addEventListener("click", (event) => {
+          if (!solutionsNav.contains(event.target)) {
+            solutionsNav.classList.remove("is-open");
+            solutionsTrigger.setAttribute("aria-expanded", "false");
+          }
+        });
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            solutionsNav.classList.remove("is-open");
+            solutionsTrigger.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
       // 3. Staggered Core Element Lazy Entrance
       const revealElements = document.querySelectorAll(".reveal");
       const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -1003,6 +950,13 @@
       }, { threshold: 0.05, rootMargin: "0px 0px -20px 0px" });
 
       revealElements.forEach(el => revealObserver.observe(el));
+
+      const pointerRevealSections = document.querySelectorAll('.services-inspiration-grid, .solutions-showcase');
+      pointerRevealSections.forEach(section => {
+        section.addEventListener('mouseenter', () => section.classList.add('is-hovered'));
+        section.addEventListener('mousemove', () => section.classList.add('is-hovered'));
+        section.addEventListener('mouseleave', () => section.classList.remove('is-hovered'));
+      });
 
       // 4. Advanced High-Performance 3D Perspective Mouse Engine
       const trackingFrames = document.querySelectorAll('.interactive-3d-frame, .service-inspiration-card, .case-card, .team-card');
