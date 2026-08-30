@@ -2984,8 +2984,11 @@
 
     @media (max-width: 768px) {
       .hero {
-        padding: 132px 0 40px 0;
+        padding: 104px 0 40px 0;
       }
+      .top-brand-bar { padding: 14px 0; }
+      .navbar { padding: 14px 0; }
+      .navbar.scrolled { padding: 10px 0; }
       .hero-glass-dashboard {
         padding: 30px 22px;
         border-radius: 24px;
