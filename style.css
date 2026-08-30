@@ -3004,14 +3004,12 @@
         gap: 10px;
       }
       .hero-pill-btn {
-        flex: 1 1 0;
+        flex: 0 1 auto;
         min-width: 0;
-        padding: 13px 10px;
-        font-size: 0.66rem;
+        padding: 12px 14px;
+        font-size: 0.6rem;
         letter-spacing: 0.02em;
         text-align: center;
-        overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
       }
 
@@ -3072,8 +3070,8 @@
         padding: 26px 14px;
       }
       .hero-pill-btn {
-        padding: 12px 12px;
-        font-size: 0.6rem;
+        padding: 11px 10px;
+        font-size: 0.55rem;
       }
       .hero-pill-btn-group {
         gap: 8px;
