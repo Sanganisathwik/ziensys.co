@@ -270,7 +270,7 @@
       flex-direction: column;
       gap: 4px;
       pointer-events: auto;
-      margin-left: calc(var(--space-lg) * -1);
+      margin-left: calc(var(--space-lg) * -0.35);
     }
 
     .brand-tagline {
