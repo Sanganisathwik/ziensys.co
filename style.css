@@ -241,37 +241,69 @@
       fill: none;
     }
 
+    /* Raster ZIENSYS logo (top-left) — pre-trimmed, no padding */
+    .brand-logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    /* Static ZIENSYS wordmark — no animation, consistent across the site */
     .draw-letter {
-      stroke: url(#brand-gradient); 
-      stroke-width: 3; 
-      stroke-linecap: round; 
+      stroke: url(#brand-gradient);
+      stroke-width: 3;
+      stroke-linecap: round;
       stroke-linejoin: round;
       fill: none;
-      animation: dashArray 2s ease-in-out infinite, dashOffset 2s linear infinite;
-    }
-
-    @keyframes dashArray {
-      0% { stroke-dasharray: 0 1 359 0; }
-      50% { stroke-dasharray: 0 359 1 0; }
-      100% { stroke-dasharray: 359 1 0 0; }
-    }
-
-    @keyframes dashOffset {
-      0% { stroke-dashoffset: 365; }
-      100% { stroke-dashoffset: 5; }
     }
 
     .logo-accent-square {
       width: 10px;
       height: 10px;
-      background-color: #7C3AED; 
-      opacity: 0;
-      animation: popIn 0.3s ease-out 2.5s forwards; 
+      background-color: #7C3AED;
+      opacity: 1;
     }
 
-    @keyframes popIn {
-      from { opacity: 0; transform: scale(0.5); }
-      to { opacity: 1; transform: scale(1); }
+    /* Brand lockup + capability tagline */
+    .brand-lockup {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      pointer-events: auto;
+      margin-left: calc(var(--space-lg) * -1);
+    }
+
+    .brand-tagline {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      margin: 14px 0 0;
+    }
+
+    /* The centered nav capsule occupies the space beside the logo on
+       tablet / small-laptop widths, so only show the header tagline where
+       it has real clearance: wide desktop, or mobile (hamburger nav). */
+    .brand-tagline { display: none; }
+
+    @media (min-width: 1280px) {
+      .brand-tagline { display: block; }
+    }
+
+    @media (max-width: 768px) {
+      .brand-tagline { display: block; }
     }
 
     /* Centered Pill Capsule */
@@ -1525,17 +1557,31 @@
         --space-xxl: 80px;
       }
       .container { padding: 0 var(--space-md); }
+      .nav-container { min-height: 54px; }
       .hamburger {
         display: flex;
         position: absolute;
         right: var(--space-md);
         top: 50%;
         transform: translateY(-50%);
+        width: 18px;
+        height: 12px;
+        padding: 9px;
+        box-sizing: content-box;
+        background: #0f172a;
+        border-radius: 9px;
       }
+      .hamburger span { background-color: #ffffff; height: 2px; border-radius: 2px; }
+      .hamburger.active span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+      .hamburger.active span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+      .nav-capsule { background: transparent; border-color: transparent; box-shadow: none; }
       .nav-menu { display: none; }
       .nav-contact-link { display: none !important; }
       .vision-grid, .contact-grid { grid-template-columns: 1fr; }
       .interactive-3d-frame { height: 320px; }
+      .brand-logo-img { height: 34px; }
+      .brand-tagline { font-size: 0.52rem; letter-spacing: 0.14em; }
+      .brand-lockup { margin-left: 0; }
     }
 
     /* ==========================================================================
@@ -2290,8 +2336,8 @@
       justify-content: center;
       z-index: 20;
       box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
-      top: 50%;
-      left: 56%;
+      top: 74%;
+      left: 52%;
       transform: translate(-50%, -50%);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
       cursor: pointer;
@@ -2663,13 +2709,11 @@
       z-index: 5;
       position: relative;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
       gap: 50px;
       align-items: center;
       min-height: calc(100vh - 200px);
       width: 100%;
-      transform-style: preserve-3d;
-      will-change: transform;
     }
 
     .hero-dash-left {
@@ -2677,7 +2721,6 @@
       flex-direction: column;
       align-items: flex-start;
       z-index: 10;
-      transform: translateZ(30px);
     }
 
     .hero-dash-tag {
@@ -2715,7 +2758,12 @@
     .hero-pill-btn-group {
       display: flex;
       gap: 16px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .hero-pill-btn {
+      white-space: nowrap;
     }
 
     .hero-pill-btn {
@@ -2762,16 +2810,18 @@
       position: relative;
       height: 350px;
       width: 100%;
+      min-width: 0;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       z-index: 10;
-      transform: translateZ(40px);
+      overflow: hidden;
     }
 
     .hero-accordion-container {
       position: relative;
       width: 100%;
+      min-width: 0;
       height: 100%;
       display: flex;
       gap: 12px;
@@ -2904,9 +2954,11 @@
       pointer-events: none;
       z-index: 15;
       text-transform: uppercase;
-      left: -65px;
+      left: 50%;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
       mix-blend-mode: overlay;
       white-space: nowrap;
     }
@@ -2914,11 +2966,13 @@
     /* Responsive styles for Hero Dashboard */
     @media (max-width: 1100px) {
       .hero-glass-dashboard {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         padding: 40px;
         gap: 30px;
         min-height: auto; /* Prevent unnatural stretching when stacked */
       }
+      .hero-dash-left,
+      .hero-dash-right { min-width: 0; max-width: 100%; }
       .hero-dash-right {
         height: 320px;
       }
@@ -2930,41 +2984,111 @@
 
     @media (max-width: 768px) {
       .hero {
-        padding: 100px 0 40px 0;
+        padding: 104px 0 40px 0;
       }
+      .top-brand-bar { padding: 14px 0; }
+      .navbar { padding: 14px 0; }
+      .navbar.scrolled { padding: 10px 0; }
       .hero-glass-dashboard {
-        padding: 40px 20px;
+        padding: 30px 22px;
         border-radius: 24px;
+        gap: 26px;
         min-height: auto;
       }
+      .scroll-indicator { display: none; }
       .hero-dash-left {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
+      }
+      .hero-dash-tag {
+        margin-bottom: 14px;
       }
       .hero-dash-title {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        font-size: clamp(1.7rem, 7vw, 2.4rem);
+        margin-bottom: 16px;
+      }
+      .hero-dash-sub {
+        font-size: 0.92rem;
+        margin-bottom: 26px;
       }
       .hero-pill-btn-group {
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
+        min-width: 0;
+        gap: 10px;
       }
       .hero-pill-btn {
-        width: 100%;
-        padding: 14px 28px;
+        flex: 0 1 auto;
+        min-width: 0;
+        padding: 12px 14px;
+        font-size: 0.6rem;
+        letter-spacing: 0.02em;
+        text-align: center;
+        white-space: nowrap;
       }
+
+      /* Accordion -> touch-friendly stacked list (no hover needed) */
       .hero-dash-right {
-        height: 280px;
+        height: auto;
+        overflow: visible;
+        display: block;
       }
-      .hero-accordion-plate {
-        width: 48px;
+      .hero-accordion-container {
+        flex-direction: column;
+        height: auto;
+        gap: 8px;
       }
+      .hero-accordion-plate,
       .hero-accordion-plate.plate-expanded,
+      .hero-accordion-container:hover .hero-accordion-plate,
       .hero-accordion-container .hero-accordion-plate:hover {
-        width: 130px !important;
+        width: 100% !important;
+        height: auto;
+        min-height: 54px;
+        transform: none;
+        border-radius: 16px;
+        box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.04);
+      }
+      .plate-content {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 14px 14px;
+      }
+      .hero-pill-primary { box-shadow: none; }
+      .plate-tag {
+        writing-mode: horizontal-tb;
+        text-orientation: unset;
+        opacity: 1;
+        font-size: 0.6rem;
+        flex-shrink: 0;
+        width: 104px;
+      }
+      .plate-label-bottom {
+        opacity: 1;
+        transform: none;
+        font-size: 0.9rem;
+      }
+      .plate-label-bottom br {
+        display: none;
       }
       .hero-accordion-overlay-text {
-        font-size: 3.5rem;
-        left: -20px;
+        display: none;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero-glass-dashboard {
+        padding: 26px 14px;
+      }
+      .hero-pill-btn {
+        padding: 11px 10px;
+        font-size: 0.55rem;
+      }
+      .hero-pill-btn-group {
+        gap: 8px;
       }
     }
 
@@ -3473,6 +3597,127 @@
     .eng-card:hover .eng-content .eng-logo-bottom-text {
       opacity: 1;
       letter-spacing: 1px;
+    }
+
+    /* ================= Website revision components ================= */
+
+    /* Contact form status message */
+    .contact-form-status {
+      margin: 14px 0 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .contact-form-status.is-ok { color: #16a34a; }
+    .contact-form-status.is-error { color: #dc2626; }
+
+    /* Service card Solutions / Assessments sub-block */
+    .service-sub-block {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .service-sub-block p {
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .service-sub-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #0f172a;
+      margin-right: 6px;
+    }
+
+    /* Solutions + Assessments + Why-Choose grids */
+    .solutions-grid,
+    .assessments-grid,
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .solutions-item,
+    .assessments-item,
+    .why-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 26px;
+    }
+
+    .solutions-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .solutions-item h3,
+    .assessments-item h3,
+    .why-item-title {
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 10px 0 8px;
+    }
+
+    .solutions-item p,
+    .assessments-item p,
+    .why-item-desc {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .solutions-item a {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--brand-primary);
+      letter-spacing: 0.05em;
+    }
+
+    .eng-corps-block {
+      margin-top: 44px;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .eng-corps-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 10px;
+    }
+
+    .eng-corps-desc {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      max-width: 760px;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .solutions-grid,
+      .assessments-grid,
+      .why-grid { grid-template-columns: 1fr; }
     }
 
 

@@ -30,25 +30,12 @@
   <!-- Top Absolute Header for Logo and Contact button (Scrolls away) -->
   <div class="top-brand-bar">
     <div class="container top-brand-container">
-      <a href="#hero" class="brand-logo" aria-label="Ziensys Home">
-        <svg viewBox="0 0 220 40" class="ziensys-svg">
-          <defs>
-            <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#2563EB" /> 
-              <stop offset="100%" stop-color="#7C3AED" />
-            </linearGradient>
-          </defs>
-          <!-- Individual paths for perfectly synchronized loader animation matching the component -->
-          <path class="draw-letter" pathLength="360" d="M 5,5 h 20 L 5,35 h 20" />
-          <path class="draw-letter" pathLength="360" d="M 40,5 h 15 M 47.5,5 v 30 M 40,35 h 15" />
-          <path class="draw-letter" pathLength="360" d="M 85,5 h -20 v 30 h 20 M 65,20 h 15" />
-          <path class="draw-letter" pathLength="360" d="M 95,35 v -30 l 20,30 v -30" />
-          <path class="draw-letter" pathLength="360" d="M 145,5 h -15 c -5,0 -5,15 0,15 h 10 c 5,0 5,15 0,15 h -15" />
-          <path class="draw-letter" pathLength="360" d="M 155,5 l 10,15 l 10,-15 M 165,20 v 15" />
-          <path class="draw-letter" pathLength="360" d="M 205,5 h -15 c -5,0 -5,15 0,15 h 10 c 5,0 5,15 0,15 h -15" />
-        </svg>
-        <div class="logo-accent-square"></div>
-      </a>
+      <div class="brand-lockup">
+        <a href="#hero" class="brand-logo" aria-label="Ziensys Home">
+          <img src="ziensys-logo.png" alt="ZIENSYS" class="brand-logo-img">
+        </a>
+        <span class="brand-tagline">Design &bull; Secure &bull; Automate &bull; Operate</span>
+      </div>
       <a href="#contact" class="nav-contact-link">Get in touch</a>
     </div>
   </div>
@@ -61,167 +48,87 @@
           <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
           <li class="nav-item nav-item-dropdown">
             <a href="#services" class="nav-link">Services</a>
-            <!-- Megamenu Dropdown containing 8 pixel-dotted cells -->
+            <!-- Megamenu Dropdown: 6 core service categories -->
             <div class="megamenu-dropdown">
               <div class="megamenu-grid">
-                <!-- Cell 1: Software & AI -->
-                <div class="megamenu-cell" onclick="location.href='#services'">
+                <div class="megamenu-cell" onclick="location.href='#service-ai'">
                   <div class="megamenu-cell-left">
                     <div class="megamenu-cell-icon">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <circle cx="10" cy="4" r="1.2" />
-                        <circle cx="10" cy="7" r="1.2" />
-                        <circle cx="4" cy="10" r="1.2" />
-                        <circle cx="7" cy="10" r="1.2" />
-                        <circle cx="10" cy="10" r="1.2" />
-                        <circle cx="13" cy="10" r="1.2" />
-                        <circle cx="16" cy="10" r="1.2" />
-                        <circle cx="10" cy="13" r="1.2" />
-                        <circle cx="10" cy="16" r="1.2" />
+                        <circle cx="10" cy="4" r="1.2" /><circle cx="10" cy="7" r="1.2" /><circle cx="4" cy="10" r="1.2" /><circle cx="7" cy="10" r="1.2" /><circle cx="10" cy="10" r="1.2" /><circle cx="13" cy="10" r="1.2" /><circle cx="16" cy="10" r="1.2" /><circle cx="10" cy="13" r="1.2" /><circle cx="10" cy="16" r="1.2" />
                       </svg>
                     </div>
-                    <span class="megamenu-cell-title">Software & AI Solutions</span>
+                    <span class="megamenu-cell-title">AI / ML &amp; Intelligence</span>
                   </div>
-                  <span class="megamenu-cell-badge">/6 services</span>
+                  <span class="megamenu-cell-badge">01</span>
                 </div>
 
-                <!-- Cell 2: Cloud & DevOps -->
-                <div class="megamenu-cell" onclick="location.href='#services'">
+                <div class="megamenu-cell" onclick="location.href='#service-software'">
                   <div class="megamenu-cell-left">
                     <div class="megamenu-cell-icon">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <circle cx="6" cy="14" r="1.2" />
-                        <circle cx="9" cy="14" r="1.2" />
-                        <circle cx="12" cy="14" r="1.2" />
-                        <circle cx="15" cy="14" r="1.2" />
-                        <circle cx="5" cy="10" r="1.2" />
-                        <circle cx="10" cy="8" r="1.2" />
-                        <circle cx="15" cy="10" r="1.2" />
-                        <circle cx="7" cy="6" r="1.2" />
-                        <circle cx="13" cy="6" r="1.2" />
+                        <circle cx="6" cy="14" r="1.2" /><circle cx="9" cy="14" r="1.2" /><circle cx="12" cy="14" r="1.2" /><circle cx="15" cy="14" r="1.2" /><circle cx="5" cy="10" r="1.2" /><circle cx="10" cy="8" r="1.2" /><circle cx="15" cy="10" r="1.2" /><circle cx="7" cy="6" r="1.2" /><circle cx="13" cy="6" r="1.2" />
                       </svg>
                     </div>
-                    <span class="megamenu-cell-title">Cloud & Hybrid Systems</span>
+                    <span class="megamenu-cell-title">Web Dev &amp; Software Services</span>
                   </div>
-                  <span class="megamenu-cell-badge">/7 services</span>
+                  <span class="megamenu-cell-badge">02</span>
                 </div>
 
-                <!-- Cell 3: Cybersecurity -->
-                <div class="megamenu-cell" onclick="location.href='#services'">
+                <div class="megamenu-cell" onclick="location.href='#service-network'">
                   <div class="megamenu-cell-left">
                     <div class="megamenu-cell-icon">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <circle cx="10" cy="4" r="1.2" />
-                        <circle cx="6" cy="6" r="1.2" />
-                        <circle cx="14" cy="6" r="1.2" />
-                        <circle cx="5" cy="9" r="1.2" />
-                        <circle cx="10" cy="9" r="1.2" />
-                        <circle cx="15" cy="9" r="1.2" />
-                        <circle cx="6" cy="13" r="1.2" />
-                        <circle cx="14" cy="13" r="1.2" />
-                        <circle cx="10" cy="16" r="1.2" />
+                        <circle cx="10" cy="4" r="1.2" /><circle cx="6" cy="6" r="1.2" /><circle cx="14" cy="6" r="1.2" /><circle cx="5" cy="9" r="1.2" /><circle cx="10" cy="9" r="1.2" /><circle cx="15" cy="9" r="1.2" /><circle cx="6" cy="13" r="1.2" /><circle cx="14" cy="13" r="1.2" /><circle cx="10" cy="16" r="1.2" />
                       </svg>
                     </div>
-                    <span class="megamenu-cell-title">Cybersecurity Operations</span>
+                    <span class="megamenu-cell-title">Network &amp; Security</span>
                   </div>
-                  <span class="megamenu-cell-badge">/5 services</span>
+                  <span class="megamenu-cell-badge">03</span>
                 </div>
 
-                <!-- Cell 4: IoT & Edge -->
-                <div class="megamenu-cell" onclick="location.href='#services'">
+                <div class="megamenu-cell" onclick="location.href='#service-cloud'">
                   <div class="megamenu-cell-left">
                     <div class="megamenu-cell-icon">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <circle cx="4" cy="16" r="1.2" />
-                        <circle cx="7" cy="13" r="1.2" />
-                        <circle cx="10" cy="10" r="1.2" />
-                        <circle cx="13" cy="7" r="1.2" />
-                        <circle cx="16" cy="4" r="1.2" />
-                        <circle cx="7" cy="16" r="1.2" />
-                        <circle cx="10" cy="13" r="1.2" />
-                        <circle cx="13" cy="10" r="1.2" />
+                        <circle cx="4" cy="16" r="1.2" /><circle cx="7" cy="13" r="1.2" /><circle cx="10" cy="10" r="1.2" /><circle cx="13" cy="7" r="1.2" /><circle cx="16" cy="4" r="1.2" /><circle cx="7" cy="16" r="1.2" /><circle cx="10" cy="13" r="1.2" /><circle cx="13" cy="10" r="1.2" />
                       </svg>
                     </div>
-                    <span class="megamenu-cell-title">IoT & Edge Systems</span>
+                    <span class="megamenu-cell-title">Cloud &amp; IT</span>
                   </div>
-                  <span class="megamenu-cell-badge">/7 services</span>
+                  <span class="megamenu-cell-badge">04</span>
                 </div>
 
-                <!-- Cell 5: Hardware -->
-                <div class="megamenu-cell" onclick="location.href='#services'">
+                <div class="megamenu-cell" onclick="location.href='#service-automation'">
                   <div class="megamenu-cell-left">
                     <div class="megamenu-cell-icon">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <circle cx="6" cy="6" r="1.2" />
-                        <circle cx="10" cy="6" r="1.2" />
-                        <circle cx="14" cy="6" r="1.2" />
-                        <circle cx="6" cy="10" r="1.2" />
-                        <circle cx="14" cy="10" r="1.2" />
-                        <circle cx="6" cy="14" r="1.2" />
-                        <circle cx="10" cy="14" r="1.2" />
-                        <circle cx="14" cy="14" r="1.2" />
+                        <circle cx="6" cy="6" r="1.2" /><circle cx="10" cy="6" r="1.2" /><circle cx="14" cy="6" r="1.2" /><circle cx="6" cy="10" r="1.2" /><circle cx="14" cy="10" r="1.2" /><circle cx="6" cy="14" r="1.2" /><circle cx="10" cy="14" r="1.2" /><circle cx="14" cy="14" r="1.2" />
                       </svg>
                     </div>
-                    <span class="megamenu-cell-title">Hardware & PCB Design</span>
+                    <span class="megamenu-cell-title">Automation</span>
                   </div>
-                  <span class="megamenu-cell-badge">/6 services</span>
+                  <span class="megamenu-cell-badge">05</span>
                 </div>
 
-                <!-- Cell 6: Managed Services -->
-                <div class="megamenu-cell" onclick="location.href='#services'">
+                <div class="megamenu-cell" onclick="location.href='#service-cybersecurity'">
                   <div class="megamenu-cell-left">
                     <div class="megamenu-cell-icon">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <circle cx="10" cy="10" r="1.5" />
-                        <circle cx="6" cy="10" r="1.2" />
-                        <circle cx="14" cy="10" r="1.2" />
-                        <circle cx="10" cy="6" r="1.2" />
-                        <circle cx="10" cy="14" r="1.2" />
+                        <circle cx="10" cy="10" r="1.5" /><circle cx="6" cy="10" r="1.2" /><circle cx="14" cy="10" r="1.2" /><circle cx="10" cy="6" r="1.2" /><circle cx="10" cy="14" r="1.2" />
                       </svg>
                     </div>
-                    <span class="megamenu-cell-title">IT & Managed Operations</span>
+                    <span class="megamenu-cell-title">Cybersecurity</span>
                   </div>
-                  <span class="megamenu-cell-badge">/6 services</span>
-                </div>
-
-                <!-- Cell 7: System Architecture -->
-                <div class="megamenu-cell" onclick="location.href='#vision'">
-                  <div class="megamenu-cell-left">
-                    <div class="megamenu-cell-icon">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <circle cx="10" cy="10" r="1.2"/>
-                        <circle cx="5" cy="5" r="1.2"/>
-                        <circle cx="15" cy="5" r="1.2"/>
-                        <circle cx="5" cy="15" r="1.2"/>
-                        <circle cx="15" cy="15" r="1.2"/>
-                      </svg>
-                    </div>
-                    <span class="megamenu-cell-title">Architecture Consulting</span>
-                  </div>
-                  <span class="megamenu-cell-badge">/3 services</span>
-                </div>
-
-                <!-- Cell 8: Product Innovation -->
-                <div class="megamenu-cell" onclick="location.href='#cases'">
-                  <div class="megamenu-cell-left">
-                    <div class="megamenu-cell-icon">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <circle cx="10" cy="5" r="1.5" />
-                        <circle cx="5" cy="12" r="1.2" />
-                        <circle cx="15" cy="12" r="1.2" />
-                        <circle cx="10" cy="15" r="1.2" />
-                      </svg>
-                    </div>
-                    <span class="megamenu-cell-title">Product Innovation</span>
-                  </div>
-                  <span class="megamenu-cell-badge">/5 services</span>
+                  <span class="megamenu-cell-badge">06</span>
                 </div>
               </div>
             </div>
           </li>
+          <li class="nav-item"><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="#assessments" class="nav-link">Assessments</a></li>
           <li class="nav-item"><a href="#cases" class="nav-link">Portfolio</a></li>
           <li class="nav-item"><a href="#vision" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#team" class="nav-link">Insights</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -236,10 +143,11 @@
 
   <div class="mobile-menu-overlay" id="mobile-menu">
     <a href="#hero" class="nav-link mobile-link">Home</a>
-    <a href="#vision" class="nav-link mobile-link">Vision</a>
     <a href="#services" class="nav-link mobile-link">Services</a>
-    <a href="#cases" class="nav-link mobile-link">Case Studies</a>
-    <a href="#team" class="nav-link mobile-link">Team</a>
+    <a href="#solutions" class="nav-link mobile-link">Solutions</a>
+    <a href="#assessments" class="nav-link mobile-link">Assessments</a>
+    <a href="#cases" class="nav-link mobile-link">Portfolio</a>
+    <a href="#vision" class="nav-link mobile-link">About</a>
     <a href="#contact" class="nav-link mobile-link">Contact</a>
   </div>
 
@@ -249,8 +157,6 @@
       <div class="hero-glow-blob-1"></div>
       <div class="hero-glow-blob-2"></div>
 
-      <!-- Luxury background fluid math waves -->
-      <canvas id="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.5;"></canvas>
       <!-- Local white grid overlay for light hero section -->
       <div class="hero-grid-overlay"></div>
 
@@ -259,11 +165,14 @@
         <div class="hero-glass-dashboard reveal">
           <!-- Left Column: Ziensys Brand Message & Actions -->
           <div class="hero-dash-left">
+            <span class="hero-dash-tag">// Intelligence-Led Engineering</span>
             <h1 class="hero-dash-title">
-              We don't just consume <br>technology <span class="highlight-blue">we architect it.</span>
+              Powered by <span class="highlight-blue">AI &amp; Machine Intelligence</span><br>engineered for the enterprise.
             </h1>
             <p class="hero-dash-sub">
-              Engineering-first systems designed for exceptional stability, extreme processing scales, and absolute mathematical predictability.
+              Ziensys designs intelligent, secure, and automated systems &mdash; from applied AI/ML models to
+              software, network security, cloud, and automation &mdash; built for stability, scale, and
+              mathematical predictability.
             </p>
             <div class="hero-pill-btn-group">
               <a href="#services" class="hero-pill-btn hero-pill-primary">Explore Core Solutions</a>
@@ -271,60 +180,46 @@
             </div>
           </div>
 
-          <!-- Right Column: Accordion Glass Plates Stack -->
+          <!-- Right Column: Accordion Glass Plates Stack (priority order) -->
           <div class="hero-dash-right">
-            <!-- Overlapping vertical glass panels -->
             <div class="hero-accordion-container">
-              <!-- Plate 1 -->
-              <div class="hero-accordion-plate plate-1-bg">
+              <div class="hero-accordion-plate plate-1-bg plate-expanded">
                 <div class="plate-content">
-                  <span class="plate-tag">INTELLIGENCE</span>
-                  <div class="plate-label-bottom">Engineered AI &<br>Custom Software</div>
+                  <span class="plate-tag">01 &mdash; INTELLIGENCE</span>
+                  <div class="plate-label-bottom">AI / ML &amp;<br>Intelligence</div>
                 </div>
               </div>
-
-              <!-- Plate 2 -->
               <div class="hero-accordion-plate plate-2-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">SECURITY</span>
-                  <div class="plate-label-bottom">Proactive Zero-Trust<br>Defense</div>
+                  <span class="plate-tag">02 &mdash; BUILD</span>
+                  <div class="plate-label-bottom">Web Dev &amp;<br>Software Services</div>
                 </div>
               </div>
-
-              <!-- Plate 3 -->
               <div class="hero-accordion-plate plate-3-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">CLOUD</span>
-                  <div class="plate-label-bottom">Scalable Infrastructure<br>& Migration</div>
+                  <span class="plate-tag">03 &mdash; CONNECT</span>
+                  <div class="plate-label-bottom">Network &amp;<br>Security</div>
                 </div>
               </div>
-
-              <!-- Plate 4 -->
               <div class="hero-accordion-plate plate-4-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">CONNECTIVITY</span>
-                  <div class="plate-label-bottom">Low-Latency IoT<br>& Firmware</div>
+                  <span class="plate-tag">04 &mdash; SCALE</span>
+                  <div class="plate-label-bottom">Cloud &amp; IT</div>
                 </div>
               </div>
-
-              <!-- Plate 5 -->
               <div class="hero-accordion-plate plate-5-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">HARDWARE</span>
-                  <div class="plate-label-bottom">Precision Multi-Layer<br>PCB Design</div>
+                  <span class="plate-tag">05 &mdash; AUTOMATE</span>
+                  <div class="plate-label-bottom">Automation</div>
                 </div>
               </div>
-
-              <!-- Plate 6 (Expanded by default) -->
-              <div class="hero-accordion-plate plate-6-bg plate-expanded">
+              <div class="hero-accordion-plate plate-6-bg">
                 <div class="plate-content">
-                  <span class="plate-tag">AUTOMATION</span>
-                  <div class="plate-label-bottom">Programmatic IT &<br>Managed Services</div>
+                  <span class="plate-tag">06 &mdash; DEFEND</span>
+                  <div class="plate-label-bottom">Cybersecurity</div>
                 </div>
               </div>
             </div>
-
-            <!-- Big semi-transparent typography backdrop overlay -->
             <div class="hero-accordion-overlay-text">ZIENSYS</div>
           </div>
         </div>
@@ -444,18 +339,23 @@
         </div>
 
         <div class="services-inspiration-grid perspective-context">
-          <!-- Card 1: Software & AI Solutions (Active state by default, Amber Theme) -->
-          <div class="service-inspiration-card card-theme-amber active-card reveal">
+          <!-- Service 01: AI / ML & Intelligence -->
+          <div class="service-inspiration-card card-theme-amber active-card reveal" id="service-ai">
             <div class="bento-text-column-left">
               <div class="service-inspiration-badge">
                 <span class="badge-dot" style="background-color: var(--dot-color);"></span>
-                <span class="badge-text">Active Optimizer</span>
+                <span class="badge-text">01 &mdash; Intelligence</span>
               </div>
               <div style="margin-top: 24px; margin-bottom: 24px;">
-                <h3 class="service-inspiration-title">Software & AI Solutions</h3>
+                <h3 class="service-inspiration-title">AI / ML &amp; Intelligence</h3>
                 <p class="service-inspiration-desc">
-                  High-performance backend systems running mathematically sound logic, low-latency intelligence compilers, and sub-millisecond real-time data streaming engines designed by <span class="highlight-ziensys">Ziensys</span>.
+                  Applied machine learning, predictive models, LLM and agentic workflows, computer vision, and
+                  decision-intelligence pipelines &mdash; engineered and operationalised by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
+                <div class="service-sub-block">
+                  <p><span class="service-sub-label">Solutions:</span> Model development &amp; MLOps, LLM/RAG assistants, forecasting &amp; anomaly detection, intelligent document processing.</p>
+                  <p><span class="service-sub-label">Assessments:</span> AI readiness &amp; data-maturity review, model risk &amp; bias audit, use-case feasibility scoring.</p>
+                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -477,18 +377,23 @@
             </div>
           </div>
 
-          <!-- Card 3: Cloud & Hybrid Systems (Slate Grey Theme) -->
-          <div class="service-inspiration-card card-theme-slate reveal reveal-delay-2">
+          <!-- Service 02: Web Dev & Software Services -->
+          <div class="service-inspiration-card card-theme-slate reveal reveal-delay-2" id="service-software">
             <div class="bento-text-column-left">
               <div class="service-inspiration-badge">
                 <span class="badge-dot" style="background-color: var(--dot-color);"></span>
-                <span class="badge-text">Elastic Stack</span>
+                <span class="badge-text">02 &mdash; Build</span>
               </div>
               <div style="margin-top: 24px; margin-bottom: 24px;">
-                <h3 class="service-inspiration-title">Cloud & Hybrid Systems</h3>
+                <h3 class="service-inspiration-title">Web Dev &amp; Software Services</h3>
                 <p class="service-inspiration-desc">
-                  Highly resilient cloud systems, infrastructure automations, elastic multi-region routing models, and transactional databases designed for absolute integrity by <span class="highlight-ziensys">Ziensys</span>.
+                  Custom web and product engineering &mdash; front-end, APIs, high-performance backends, and
+                  system integration &mdash; delivered to a consistent architectural standard by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
+                <div class="service-sub-block">
+                  <p><span class="service-sub-label">Solutions:</span> Web &amp; mobile apps, SaaS platforms, API &amp; microservices, legacy modernisation, e-commerce.</p>
+                  <p><span class="service-sub-label">Assessments:</span> Code &amp; architecture review, performance audit, technical due diligence, UX/accessibility check.</p>
+                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -510,18 +415,23 @@
             </div>
           </div>
 
-          <!-- Card 4: Cybersecurity & Trust (Mint Green Theme) -->
-          <div class="service-inspiration-card card-theme-mint reveal">
+          <!-- Service 03: Network & Security -->
+          <div class="service-inspiration-card card-theme-mint reveal" id="service-network">
             <div class="bento-text-column-left">
               <div class="service-inspiration-badge">
                 <span class="badge-dot" style="background-color: var(--dot-color);"></span>
-                <span class="badge-text">Zero-Trust Guard</span>
+                <span class="badge-text">03 &mdash; Connect</span>
               </div>
               <div style="margin-top: 24px; margin-bottom: 24px;">
-                <h3 class="service-inspiration-title">Cybersecurity & Trust</h3>
+                <h3 class="service-inspiration-title">Network &amp; Security</h3>
                 <p class="service-inspiration-desc">
-                  Zero-Trust architecture deployments, end-to-end post-quantum cryptographic security protocols, penetration modeling, and code security audits by <span class="highlight-ziensys">Ziensys</span>.
+                  Secure network design, segmentation, firewalls, VPN and zero-trust access, plus continuous
+                  monitoring &mdash; architected for resilience by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
+                <div class="service-sub-block">
+                  <p><span class="service-sub-label">Solutions:</span> LAN/WAN &amp; SD-WAN design, zero-trust network access, firewall &amp; NAC, secure remote access.</p>
+                  <p><span class="service-sub-label">Assessments:</span> Network architecture review, vulnerability scan, segmentation &amp; firewall rule audit.</p>
+                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -544,18 +454,23 @@
             </div>
           </div>
 
-          <!-- Card 5: Hardware Engineering (Soft Rose Theme) -->
-          <div class="service-inspiration-card card-theme-rose reveal reveal-delay-1">
+          <!-- Service 04: Cloud & IT -->
+          <div class="service-inspiration-card card-theme-rose reveal reveal-delay-1" id="service-cloud">
             <div class="bento-text-column-left">
               <div class="service-inspiration-badge">
                 <span class="badge-dot" style="background-color: var(--dot-color);"></span>
-                <span class="badge-text">Silicon Native</span>
+                <span class="badge-text">04 &mdash; Scale</span>
               </div>
               <div style="margin-top: 24px; margin-bottom: 24px;">
-                <h3 class="service-inspiration-title">Hardware Engineering</h3>
+                <h3 class="service-inspiration-title">Cloud &amp; IT</h3>
                 <p class="service-inspiration-desc">
-                  Custom multi-layer PCB design layouts, microwave high-frequency signal simulation blueprints, low-power IoT telemetry firmware, and physical prototyping by <span class="highlight-ziensys">Ziensys</span>.
+                  Cloud architecture, migration, and hybrid infrastructure alongside day-to-day IT operations
+                  and managed support &mdash; run to strict SLAs by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
+                <div class="service-sub-block">
+                  <p><span class="service-sub-label">Solutions:</span> Cloud migration &amp; landing zones, hybrid/multi-cloud, IaC, backup &amp; DR, managed IT &amp; helpdesk.</p>
+                  <p><span class="service-sub-label">Assessments:</span> Cloud cost &amp; well-architected review, migration readiness, IT operations maturity assessment.</p>
+                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -578,18 +493,23 @@
             </div>
           </div>
 
-          <!-- Card 6: IT Support & Managed Ops (Sky Blue Theme) -->
-          <div class="service-inspiration-card card-theme-sky reveal reveal-delay-2">
+          <!-- Service 05: Automation -->
+          <div class="service-inspiration-card card-theme-sky reveal reveal-delay-2" id="service-automation">
             <div class="bento-text-column-left">
               <div class="service-inspiration-badge">
                 <span class="badge-dot" style="background-color: var(--dot-color);"></span>
-                <span class="badge-text">99.99% SLA</span>
+                <span class="badge-text">05 &mdash; Automate</span>
               </div>
               <div style="margin-top: 24px; margin-bottom: 24px;">
-                <h3 class="service-inspiration-title">IT Support & Managed Ops</h3>
+                <h3 class="service-inspiration-title">Automation</h3>
                 <p class="service-inspiration-desc">
-                  Predictive monitoring systems, proactive patch script automations, disaster resilience recovery routines, and strict SLA compliance management by <span class="highlight-ziensys">Ziensys</span>.
+                  Workflow, infrastructure, and business-process automation &mdash; CI/CD, RPA, orchestration,
+                  and self-healing operations &mdash; engineered for reliability by <span class="highlight-ziensys">Ziensys</span>.
                 </p>
+                <div class="service-sub-block">
+                  <p><span class="service-sub-label">Solutions:</span> CI/CD pipelines, infrastructure automation, RPA bots, workflow orchestration, monitoring &amp; auto-remediation.</p>
+                  <p><span class="service-sub-label">Assessments:</span> Automation opportunity mapping, DevOps maturity review, process-bottleneck analysis.</p>
+                </div>
               </div>
               <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
             </div>
@@ -610,7 +530,73 @@
               </svg>
             </div>
           </div>
+
+          <!-- Service 06: Cybersecurity -->
+          <div class="service-inspiration-card card-theme-amber reveal" id="service-cybersecurity">
+            <div class="bento-text-column-left">
+              <div class="service-inspiration-badge">
+                <span class="badge-dot" style="background-color: var(--dot-color);"></span>
+                <span class="badge-text">06 &mdash; Defend</span>
+              </div>
+              <div style="margin-top: 24px; margin-bottom: 24px;">
+                <h3 class="service-inspiration-title">Cybersecurity</h3>
+                <p class="service-inspiration-desc">
+                  Zero-trust security architecture, threat detection and response, identity and data protection,
+                  and compliance &mdash; built into every layer by <span class="highlight-ziensys">Ziensys</span>.
+                </p>
+                <div class="service-sub-block">
+                  <p><span class="service-sub-label">Solutions:</span> Zero-trust &amp; IAM, SIEM/SOC &amp; incident response, endpoint &amp; data protection, application security.</p>
+                  <p><span class="service-sub-label">Assessments:</span> Penetration testing, security posture &amp; gap assessment, compliance readiness (ISO 27001, SOC 2, GDPR).</p>
+                </div>
+              </div>
+              <a href="#contact" class="service-inspiration-link">Learn more <span class="arrow">→</span></a>
+            </div>
+            <div class="bento-illustration-column-right">
+              <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 80,15 L 135,38 V 82 C 135,120 110,138 80,148 C 50,138 25,120 25,82 V 38 Z" fill="url(#grad-orange-1)" />
+                <path d="M 80,45 L 108,57 V 85 C 108,108 96,120 80,126 C 64,120 52,108 52,85 V 57 Z" fill="url(#grad-orange-2)" />
+              </svg>
+            </div>
+          </div>
         </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Overview -->
+    <section class="section-spacing solutions-section" id="solutions">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// Solutions</span>
+          <h2 class="section-title">Outcome-Focused Solutions</h2>
+          <p class="section-desc">Packaged, delivery-ready engagements built on our six core capabilities &mdash; each with a consistent scope, architecture standard, and hand-off.</p>
+        </div>
+        <div class="solutions-grid reveal">
+          <div class="solutions-item"><span class="solutions-num">01</span><h3>AI / ML &amp; Intelligence</h3><p>Model development &amp; MLOps, LLM/RAG assistants, forecasting, intelligent document processing.</p><a href="#service-ai">Explore →</a></div>
+          <div class="solutions-item"><span class="solutions-num">02</span><h3>Web Dev &amp; Software</h3><p>Web &amp; mobile apps, SaaS platforms, APIs &amp; microservices, legacy modernisation.</p><a href="#service-software">Explore →</a></div>
+          <div class="solutions-item"><span class="solutions-num">03</span><h3>Network &amp; Security</h3><p>SD-WAN design, zero-trust network access, firewall &amp; NAC, secure remote access.</p><a href="#service-network">Explore →</a></div>
+          <div class="solutions-item"><span class="solutions-num">04</span><h3>Cloud &amp; IT</h3><p>Cloud migration &amp; landing zones, hybrid/multi-cloud, IaC, managed IT &amp; helpdesk.</p><a href="#service-cloud">Explore →</a></div>
+          <div class="solutions-item"><span class="solutions-num">05</span><h3>Automation</h3><p>CI/CD pipelines, infrastructure automation, RPA, orchestration, auto-remediation.</p><a href="#service-automation">Explore →</a></div>
+          <div class="solutions-item"><span class="solutions-num">06</span><h3>Cybersecurity</h3><p>Zero-trust &amp; IAM, SIEM/SOC &amp; incident response, endpoint &amp; data protection, AppSec.</p><a href="#service-cybersecurity">Explore →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessments Overview -->
+    <section class="section-spacing assessments-section" id="assessments">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// Assessments</span>
+          <h2 class="section-title">Assessments &amp; Advisory</h2>
+          <p class="section-desc">Short, fixed-scope reviews that benchmark your current state, quantify risk, and produce a prioritised roadmap before any build begins.</p>
+        </div>
+        <div class="assessments-grid reveal">
+          <div class="assessments-item"><h3>AI Readiness Review</h3><p>Data maturity, use-case feasibility, model risk &amp; bias audit.</p></div>
+          <div class="assessments-item"><h3>Architecture &amp; Code Review</h3><p>Design, performance, and technical due-diligence assessment.</p></div>
+          <div class="assessments-item"><h3>Network Assessment</h3><p>Architecture review, vulnerability scan, segmentation &amp; firewall audit.</p></div>
+          <div class="assessments-item"><h3>Cloud &amp; Cost Review</h3><p>Well-architected review, migration readiness, cost optimisation.</p></div>
+          <div class="assessments-item"><h3>Automation &amp; DevOps Audit</h3><p>Opportunity mapping, DevOps maturity, process-bottleneck analysis.</p></div>
+          <div class="assessments-item"><h3>Security Posture Assessment</h3><p>Penetration testing, gap analysis, compliance readiness (ISO 27001, SOC 2).</p></div>
         </div>
       </div>
     </section>
@@ -697,79 +683,49 @@
       </div>
     </section>
 
-    <section class="section-spacing team-section" id="team">
+    <section class="section-spacing why-choose-section" id="why-choose">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Our Team</span>
-          <h2 class="section-title">The Engineering Corps</h2>
-          <p class="section-desc">Meet the domain-specialist systems engineers and executives behind our deterministic software models and specialized hardware architectures.</p>
+          <span class="section-tag">// Why Ziensys</span>
+          <h2 class="section-title">Why Choose ZIENSYS</h2>
+          <p class="section-desc">One engineering partner across intelligence, software, network, cloud, automation, and security &mdash; delivering measurable value with consistent standards.</p>
         </div>
 
-        <div class="team-grid perspective-context">
-          <!-- Team Card 1: CEO -->
-          <div class="eng-card case-card reveal">
-            <div class="eng-border"></div>
-            <div class="eng-content">
-              <div class="eng-logo">
-                <div class="eng-logo-text">CEO</div>
-                <span class="eng-trail"></span>
-              </div>
-              <span class="eng-logo-bottom-text">Sunil</span>
-            </div>
-            <span class="eng-bottom-text">Chief Executive Officer</span>
+        <div class="why-grid reveal">
+          <div class="why-item">
+            <h3 class="why-item-title">Differentiated Engineering</h3>
+            <p class="why-item-desc">Bespoke, architecture-first systems &mdash; not off-the-shelf assembly &mdash; designed around your domain and scale.</p>
           </div>
+          <div class="why-item">
+            <h3 class="why-item-title">Reliability by Design</h3>
+            <p class="why-item-desc">Deterministic behaviour, tested failure modes, and strict SLAs so production stays predictable.</p>
+          </div>
+          <div class="why-item">
+            <h3 class="why-item-title">Deep Technical Capability</h3>
+            <p class="why-item-desc">Specialists spanning AI/ML, software, networks, cloud, automation, and security under one roof.</p>
+          </div>
+          <div class="why-item">
+            <h3 class="why-item-title">Security at Every Layer</h3>
+            <p class="why-item-desc">Zero-trust principles, hardened defaults, and continuous monitoring built in from day one.</p>
+          </div>
+          <div class="why-item">
+            <h3 class="why-item-title">Delivery Value</h3>
+            <p class="why-item-desc">Fixed-scope assessments and transparent roadmaps that de-risk investment before the build.</p>
+          </div>
+          <div class="why-item">
+            <h3 class="why-item-title">Consistent Standards</h3>
+            <p class="why-item-desc">Shared layout, terminology, and quality bar across every service and engagement.</p>
+          </div>
+        </div>
 
-          <!-- Team Card 2: CTO -->
-          <div class="eng-card case-card reveal reveal-delay-1">
-            <div class="eng-border"></div>
-            <div class="eng-content">
-              <div class="eng-logo">
-                <div class="eng-logo-text">CTO</div>
-                <span class="eng-trail"></span>
-              </div>
-              <span class="eng-logo-bottom-text">Hari</span>
-            </div>
-            <span class="eng-bottom-text">Chief Architect</span>
-          </div>
-
-          <!-- Team Card 3: Developer -->
-          <div class="eng-card case-card reveal reveal-delay-2">
-            <div class="eng-border"></div>
-            <div class="eng-content">
-              <div class="eng-logo">
-                <div class="eng-logo-text">DEVELOPER</div>
-                <span class="eng-trail"></span>
-              </div>
-              <span class="eng-logo-bottom-text">Preetham</span>
-            </div>
-            <span class="eng-bottom-text">Software Engineer</span>
-          </div>
-
-          <!-- Team Card 4: Developer -->
-          <div class="eng-card case-card reveal reveal-delay-3">
-            <div class="eng-border"></div>
-            <div class="eng-content">
-              <div class="eng-logo">
-                <div class="eng-logo-text">DEVELOPER</div>
-                <span class="eng-trail"></span>
-              </div>
-              <span class="eng-logo-bottom-text">Bharath</span>
-            </div>
-            <span class="eng-bottom-text">Software Engineer</span>
-          </div>
-
-          <!-- Team Card 5: Developer -->
-          <div class="eng-card case-card reveal reveal-delay-4">
-            <div class="eng-border"></div>
-            <div class="eng-content">
-              <div class="eng-logo">
-                <div class="eng-logo-text">DEVELOPER</div>
-                <span class="eng-trail"></span>
-              </div>
-              <span class="eng-logo-bottom-text">Sathwik</span>
-            </div>
-            <span class="eng-bottom-text">Software Engineer</span>
-          </div>
+        <div class="eng-corps-block reveal">
+          <h3 class="eng-corps-title">Engineering Corps</h3>
+          <p class="eng-corps-desc">
+            Our Engineering Corps is a cross-disciplinary group of systems engineers, architects, and
+            developers who own delivery end to end &mdash; from assessment and architecture through build,
+            automation, and ongoing operations. Teams are formed around each engagement so the right
+            specialists in AI/ML, software, network, cloud, and security work directly on your systems.
+          </p>
         </div>
       </div>
     </section>
@@ -796,7 +752,7 @@
             <!-- Stacked Glass Contact Cards -->
             <div class="contact-info-stack">
               <!-- Email Card -->
-              <a href="mailto:Info@zeinsys" class="contact-info-card">
+              <a href="mailto:info@ziensys.com" class="contact-info-card">
                 <div class="contact-info-icon-wrap">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -805,7 +761,7 @@
                 </div>
                 <div class="contact-info-details">
                   <span class="contact-info-title">Email us</span>
-                  <span class="contact-info-val">Info@zeinsys</span>
+                  <span class="contact-info-val">info@ziensys.com</span>
                 </div>
                 <div class="contact-info-arrow">
                   <span>↗</span>
@@ -855,15 +811,11 @@
 
           <!-- Right Column: Glassmorphic Dark Form Console -->
           <div class="contact-premium-right">
-            <form class="contact-glass-form" id="ziensys-contact-form" action="https://formsubmit.co/Info@zeinsys" method="POST">
+            <form class="contact-glass-form" id="ziensys-contact-form"
+                  action="https://script.google.com/macros/s/AKfycbx2YrbNBusUkc8rtpz-xJtq7Foch0F5OcaGkGlfclXpMvLoPFSzIwDHSZb8Cbbb_j5Upw/exec"
+                  method="POST">
               <!-- Honeypot field to prevent spam -->
-              <input type="text" name="_honey" style="display:none">
-              <!-- Disable FormSubmit captcha for a seamless experience -->
-              <input type="hidden" name="_captcha" value="false">
-              <!-- Set email subject -->
-              <input type="hidden" name="_subject" value="New Website Contact Form Submission!">
-              <!-- Auto-response to the sender -->
-              <input type="hidden" name="_autoresponse" value="Thank you for contacting ZIENSYS. We have received your transmission and our engineering corps will be in touch shortly.">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
               <div class="form-input-group">
                 <input type="text" name="name" id="contact-name" class="contact-glass-control" placeholder="Name" required>
@@ -872,9 +824,13 @@
                 <input type="email" name="email" id="contact-email" class="contact-glass-control" placeholder="Email" required>
               </div>
               <div class="form-input-group">
+                <input type="tel" name="phone" id="contact-phone" class="contact-glass-control" placeholder="Phone (optional)">
+              </div>
+              <div class="form-input-group">
                 <textarea name="message" id="contact-message" class="contact-glass-control" placeholder="Message" required></textarea>
               </div>
               <button type="submit" class="contact-glass-submit">Submit</button>
+              <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite" hidden></p>
             </form>
           </div>
         </div>
@@ -900,6 +856,7 @@
               </text>
             </svg>
           </a>
+          <p class="footer-tagline">Design &bull; Secure &bull; Automate &bull; Operate</p>
           <div class="footer-social-box">
             <div class="footer-social-title">Follow us on</div>
             <div class="footer-social-icons">
@@ -923,7 +880,12 @@
         <div>
           <h4 class="footer-col-title">Services</h4>
           <div class="footer-links-list">
-            
+            <a href="#service-ai">AI / ML &amp; Intelligence</a>
+            <a href="#service-software">Web Dev &amp; Software</a>
+            <a href="#service-network">Network &amp; Security</a>
+            <a href="#service-cloud">Cloud &amp; IT</a>
+            <a href="#service-automation">Automation</a>
+            <a href="#service-cybersecurity">Cybersecurity</a>
           </div>
         </div>
 
@@ -932,9 +894,9 @@
           <h4 class="footer-col-title">Company</h4>
           <div class="footer-links-list">
             <a href="#vision">About</a>
-            <a href="#cases">Blog</a>
-            <a href="#team">Press</a>
-            <a href="#contact">Careers</a>
+            <a href="#why-choose">Why Ziensys</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#assessments">Assessments</a>
             <a href="#contact">Contact Us</a>
           </div>
         </div>
@@ -1043,7 +1005,7 @@
       revealElements.forEach(el => revealObserver.observe(el));
 
       // 4. Advanced High-Performance 3D Perspective Mouse Engine
-      const trackingFrames = document.querySelectorAll('.hero-glass-dashboard, .interactive-3d-frame, .service-inspiration-card, .case-card, .team-card');
+      const trackingFrames = document.querySelectorAll('.interactive-3d-frame, .service-inspiration-card, .case-card, .team-card');
       
       // Only execute logic on devices with precise pointer devices (bypasses mobile layout shifts)
       if (window.matchMedia("(pointer: fine)").matches) {
@@ -1076,82 +1038,7 @@
         });
       }
 
-      // 5. Interactive Technical Fluid Wave Canvas Engine (Tresmares Capital Parity)
-      const canvas = document.getElementById("hero-canvas");
-      if (canvas) {
-        const ctx = canvas.getContext("2d");
-        let width = (canvas.width = canvas.offsetWidth);
-        let height = (canvas.height = canvas.offsetHeight);
-
-        window.addEventListener("resize", () => {
-          if (canvas) {
-            width = canvas.width = canvas.offsetWidth;
-            height = canvas.height = canvas.offsetHeight;
-          }
-        }, { passive: true });
-
-        let mouse = { x: width / 2, y: height / 2, tx: width / 2, ty: height / 2 };
-        window.addEventListener("mousemove", (e) => {
-          const rect = canvas.getBoundingClientRect();
-          mouse.tx = e.clientX - rect.left;
-          mouse.ty = e.clientY - rect.top;
-        }, { passive: true });
-
-        let waves = [];
-        const waveCount = 3;
-        for (let i = 0; i < waveCount; i++) {
-          waves.push({
-            y: height * 0.5,
-            length: 0.0025 + i * 0.0005,
-            amplitude: 15 + i * 10,
-            speed: 0.015 + i * 0.005,
-            phase: i * Math.PI * 0.5
-          });
-        }
-
-        let time = 0;
-        function animate() {
-          if (!canvas) return;
-          ctx.clearRect(0, 0, width, height);
-
-          // Interpolate mouse coordinates with inertia
-          mouse.x += (mouse.tx - mouse.x) * 0.05;
-          mouse.y += (mouse.ty - mouse.y) * 0.05;
-
-          waves.forEach((wave, idx) => {
-            ctx.beginPath();
-            ctx.strokeStyle = idx === 0 
-              ? "rgba(99, 102, 241, 0.14)" 
-              : idx === 1 
-                ? "rgba(56, 189, 248, 0.08)" 
-                : "rgba(255, 255, 255, 0.02)";
-            ctx.lineWidth = idx === 0 ? 1.2 : 0.8;
-            
-            for (let x = 0; x < width; x += 15) {
-              let y = wave.y + Math.sin(x * wave.length + wave.phase + time * wave.speed) * wave.amplitude;
-              
-              // Mouse gravity bending
-              const dx = x - mouse.x;
-              const dy = y - mouse.y;
-              const dist = Math.sqrt(dx * dx + dy * dy);
-              if (dist < 250) {
-                const force = (250 - dist) / 250;
-                y += (dy / dist) * force * 40;
-              }
-
-              if (x === 0) ctx.moveTo(x, y);
-              else ctx.lineTo(x, y);
-            }
-            ctx.stroke();
-          });
-
-          time += 0.8;
-          requestAnimationFrame(animate);
-        }
-        animate();
-      }
-
-      // 6. Custom luxury mouse follower
+      // 5. Custom luxury mouse follower
       const cursor = document.getElementById("custom-cursor");
       const follower = document.getElementById("custom-cursor-follower");
 
@@ -1191,6 +1078,49 @@
           card.classList.add('active-card');
         });
       });
+
+      // 8. Contact form -> Google Apps Script (saves to Sheet + emails Info@ziensys.com)
+      const contactForm = document.getElementById("ziensys-contact-form");
+      if (contactForm) {
+        const submitBtn = contactForm.querySelector(".contact-glass-submit");
+        const statusEl = document.getElementById("contact-form-status");
+        const defaultLabel = submitBtn ? submitBtn.textContent : "Submit";
+
+        const setStatus = (msg, ok) => {
+          if (!statusEl) return;
+          statusEl.textContent = msg;
+          statusEl.hidden = false;
+          statusEl.classList.toggle("is-error", ok === false);
+          statusEl.classList.toggle("is-ok", ok === true);
+        };
+
+        contactForm.addEventListener("submit", async (ev) => {
+          ev.preventDefault();
+          if (contactForm._honey && contactForm._honey.value) return; // bot
+          if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
+
+          try {
+            // Apps Script /exec does not return CORS headers, so use no-cors:
+            // the request still reaches the script (saves + emails); the
+            // response is opaque, which is fine for a fire-and-forget submit.
+            await fetch(contactForm.action, {
+              method: "POST",
+              mode: "no-cors",
+              body: new FormData(contactForm)
+            });
+            contactForm.reset();
+            setStatus("Thanks — your message has been sent. Our team will be in touch shortly.", true);
+            if (submitBtn) submitBtn.textContent = "Message sent ✓";
+          } catch (err) {
+            setStatus("Something went wrong sending your message. Please email info@ziensys.com directly.", false);
+            if (submitBtn) submitBtn.textContent = "Try again";
+          } finally {
+            setTimeout(() => {
+              if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = defaultLabel; }
+            }, 5000);
+          }
+        });
+      }
     });
   </script>
 </body>
